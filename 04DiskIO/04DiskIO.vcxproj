@@ -30,6 +30,10 @@
     <ClCompile Include="IntHeapDriver.cpp" />
     <ClCompile Include="IntNode.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="diskio.dat" />
+    <None Include="init.dat" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C6511413-2C08-4747-86B9-83A3D8789FBE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
