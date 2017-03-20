@@ -1,5 +1,8 @@
 #include "Heap.h"
 
+int leftNode(int i);
+int rightNode(int i);
+
 Heap::Heap()
 {
   mHeapArray.push_back(nullptr);
@@ -48,7 +51,10 @@ void Heap::setSortDirection(Heap::Direction dir)
 
 void Heap::buildHeap()
 {
-
+  for (int i = mHeapArray.size() / 2; i >= 1; i--)
+  {
+    heapify(i);
+  }
 }
 
 void Heap::heapify(int i)
@@ -57,14 +63,14 @@ void Heap::heapify(int i)
   int right = rightNode(i);
   int largest = i;
 
-  if (mHeapArray.size >= left)
+  if (mHeapArray.size() >= left)
   {
     if (needSwap(mHeapArray.at(i), mHeapArray.at(left)))
     {
       largest = left;
     }
   }
-  else if(mHeapArray.size >= right)
+  else if(mHeapArray.size() >= right)
   {
     if (needSwap(mHeapArray.at(i), mHeapArray.at(right)))
     {
@@ -74,7 +80,8 @@ void Heap::heapify(int i)
 
   if (largest != i)
   {
-    
+    std::iter_swap(&mHeapArray.at(i), &mHeapArray.at(largest));
+    heapify(largest);
   }
 }
 
@@ -100,4 +107,14 @@ bool Heap::needSwap(const ComparableItem *pParent, const ComparableItem *pChild)
   }
 
   return bSwap;
+}
+
+std::ostream& operator<<(std::ostream &os, const Heap &theHeap)
+{
+  for (int i = 0; i < theHeap.mHeapArray.size(); i++)
+  {
+    os << theHeap.mHeapArray.at(i);
+  }
+
+  return os;
 }

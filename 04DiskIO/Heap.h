@@ -40,7 +40,7 @@ public:
 
 
 	// display the heap by calling the << operator on each HNode
-/*	friend std::ostream& operator<<(std::ostream &os, const Heap &theHeap);*/
+	friend std::ostream& operator<<(std::ostream &os, const Heap &theHeap);
 
 	// Function to build a heap from the current vector
 	void buildHeap ();
