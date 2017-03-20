@@ -21,6 +21,8 @@ void Heap::deallocateItems()
     delete *iterator;
     iterator++;
   }
+
+  mHeapArray.clear();
 }
 
 void Heap::insert(HNode  *pcNode)

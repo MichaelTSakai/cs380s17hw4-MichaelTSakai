@@ -27,6 +27,9 @@
     <ClInclude Include="IntNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="mem_debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Heap.cpp">

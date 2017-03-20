@@ -23,6 +23,7 @@
     <ClInclude Include="Heap.h" />
     <ClInclude Include="HNode.h" />
     <ClInclude Include="IntNode.h" />
+    <ClInclude Include="mem_debug.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Heap.cpp" />
