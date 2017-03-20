@@ -32,7 +32,7 @@ public:
 	// Function to output the contents of the HNode. This will be called
 	// by the operator<<
 	virtual void outputNode (std::ostream& os) const = 0;
-	virtual ~HNode ();
+  virtual ~HNode() {};
 
 	// Function to get the current key.  The user must provide an allocated
 	// buffer as the first argument and the size of the buffer as the second

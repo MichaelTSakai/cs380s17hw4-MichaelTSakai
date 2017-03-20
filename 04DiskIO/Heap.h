@@ -40,7 +40,7 @@ public:
 
 
 	// display the heap by calling the << operator on each HNode
-	friend std::ostream& operator<<(std::ostream &os, const Heap &theHeap);
+/*	friend std::ostream& operator<<(std::ostream &os, const Heap &theHeap);
 
 	// Function to build a heap from the current vector
 	void buildHeap ();
@@ -51,7 +51,7 @@ public:
 	HNode* heapExtract ();
 
 	// Function to return the root of the heap but NOT remove it from the heap
-	const HNode  * heapExtreme () const;
+	const HNode  * heapExtreme () const; */
 
 	// get the size of the heap
 	int size ();
@@ -62,7 +62,7 @@ public:
 	// and call HNode::updateKey(void*, int) using pData and size
 	// on each of those items.
 	// Lastly, buildHeap() is called.
-	bool updateEachKey (void *pData, int size);
+	/*bool updateEachKey (void *pData, int size);
 
 	enum Direction { MAX, MIN };
 
@@ -76,17 +76,17 @@ public:
 	// if two items need to be swapped.  
 	// If the sort is ASC, then true is returned if
 	// pLeft is greater than pRight.
-	virtual bool needSwap (const ComparableItem *pParent, const ComparableItem *pChild);
+	virtual bool needSwap (const ComparableItem *pParent, const ComparableItem *pChild);*/
 
 private:
 
 	// Function to maintain the heap property starting from the given index
-	void heapify (int i);
+	/*void heapify (int i);
 
-	void heapIncreaseKey (int size, HNode *pNode);
+	void heapIncreaseKey (int size, HNode *pNode);*/
 
 	// The heap stored as a vector of HNode*'s
 	std::vector<HNode*> mHeapArray;
 
-	Direction mSortDir;
+	/*Direction mSortDir;*/
 };
