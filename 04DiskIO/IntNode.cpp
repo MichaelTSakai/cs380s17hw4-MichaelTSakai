@@ -1,5 +1,14 @@
 #include "IntNode.h"
 
+IntNode::IntNode()
+{
+
+}
+
+IntNode::IntNode(int key)
+{
+  mKey = key;
+}
 
 IntNode::~IntNode() 
 {
@@ -7,16 +16,16 @@ IntNode::~IntNode()
 
 bool IntNode::operator<(ComparableItem const &right) const
 {
-  return mValue < dynamic_cast<const IntNode*>(&right)->mValue;
+  return mKey < dynamic_cast<const IntNode*>(&right)->mKey;
 }
 
 bool IntNode::operator>(ComparableItem const &right) const
 {
-  return mValue > dynamic_cast<const IntNode*>(&right)->mValue;
+  return mKey > dynamic_cast<const IntNode*>(&right)->mKey;
 }
 bool IntNode::operator== (ComparableItem const  &right) const
 {
-  return mValue == dynamic_cast<const IntNode*>(&right)->mValue;
+  return mKey == dynamic_cast<const IntNode*>(&right)->mKey;
 }
 
 void IntNode::changeKey(void*)
@@ -26,7 +35,7 @@ void IntNode::changeKey(void*)
 
 void IntNode::outputNode(std::ostream& os) const
 {
-  os << mValue;
+  os << mKey;
 }
 
 bool IntNode::getKey(void *, int) const

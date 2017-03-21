@@ -2,6 +2,7 @@
 
 int leftNode(int i);
 int rightNode(int i);
+int parentNode(int i);
 
 Heap::Heap()
 {
@@ -51,7 +52,7 @@ void Heap::setSortDirection(Heap::Direction dir)
 
 void Heap::buildHeap()
 {
-  for (int i = mHeapArray.size() / 2; i >= 1; i--)
+  for (int i = mHeapArray.size() / 2; i > 0; i--)
   {
     heapify(i);
   }
@@ -62,17 +63,18 @@ void Heap::heapify(int i)
   int left = leftNode(i);
   int right = rightNode(i);
   int largest = i;
+  int heapSize = mHeapArray.size() - 1;
 
-  if (mHeapArray.size() >= left)
+  if (heapSize >= left)
   {
     if (needSwap(mHeapArray.at(i), mHeapArray.at(left)))
     {
       largest = left;
     }
   }
-  else if(mHeapArray.size() >= right)
+  if(heapSize >= right)
   {
-    if (needSwap(mHeapArray.at(i), mHeapArray.at(right)))
+    if (needSwap(mHeapArray.at(largest), mHeapArray.at(right)))
     {
       largest = right;
     }
@@ -85,6 +87,36 @@ void Heap::heapify(int i)
   }
 }
 
+HNode* Heap::heapExtract()
+{
+  HNode *pMax = mHeapArray.at(1);
+
+  mHeapArray.at(1) = mHeapArray.at(mHeapArray.size());
+  mHeapArray.pop_back();
+
+  heapify(1);
+
+  return pMax;
+}
+
+void Heap::heapIncreaseKey(int size, HNode *pNode)
+{
+  if (*pNode < *mHeapArray.at(size))
+  {
+    std::cerr << "Error: key smaller than previous" << std::endl;
+  }
+  else
+  {
+    delete mHeapArray.at(size);
+    mHeapArray.at(size) = pNode;
+    while (size > 1 && *mHeapArray.at(parentNode(size)) < *mHeapArray.at(size))
+    {
+      std::iter_swap(&mHeapArray.at(parentNode(size)), &mHeapArray.at(size));
+      size = parentNode(size);
+    }
+  }
+}
+
 int rightNode(int i)
 {
   return i * 2 + 1;
@@ -93,6 +125,11 @@ int rightNode(int i)
 int leftNode(int i)
 {
   return i * 2;
+}
+
+int parentNode(int i)
+{
+  return i / 2;
 }
 
 bool Heap::needSwap(const ComparableItem *pParent, const ComparableItem *pChild)
@@ -111,9 +148,9 @@ bool Heap::needSwap(const ComparableItem *pParent, const ComparableItem *pChild)
 
 std::ostream& operator<<(std::ostream &os, const Heap &theHeap)
 {
-  for (int i = 0; i < theHeap.mHeapArray.size(); i++)
+  for (int i = 1; i < theHeap.mHeapArray.size(); i++)
   {
-    os << theHeap.mHeapArray.at(i);
+    os << *theHeap.mHeapArray.at(i) << " ";
   }
 
   return os;

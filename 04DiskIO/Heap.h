@@ -48,9 +48,9 @@ public:
 
 	// Function to remove the root of the heap and return it to the calling
 	// function
-/*	HNode* heapExtract ();
+  HNode* heapExtract ();
 
-	// Function to return the root of the heap but NOT remove it from the heap
+	/*// Function to return the root of the heap but NOT remove it from the heap
 	const HNode  * heapExtreme () const; */
 
 	// get the size of the heap
@@ -83,7 +83,7 @@ private:
 	// Function to maintain the heap property starting from the given index
 	void heapify (int i);
 
-	/*void heapIncreaseKey (int size, HNode *pNode);*/
+	void heapIncreaseKey (int size, HNode *pNode);
 
 	// The heap stored as a vector of HNode*'s
 	std::vector<HNode*> mHeapArray;

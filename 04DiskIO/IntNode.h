@@ -5,6 +5,9 @@
 class IntNode : public HNode
 {
 public:
+  IntNode();
+  IntNode(int key);
+
   bool operator< (ComparableItem const &right) const;
   bool operator> (ComparableItem  const &right) const;
   bool operator== (ComparableItem const  &right)const;
@@ -18,5 +21,5 @@ public:
 
   bool updateKey(void*, int);
 private: 
-  int mValue;
+  int mKey;
 };
