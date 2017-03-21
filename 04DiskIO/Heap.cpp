@@ -90,9 +90,10 @@ void Heap::heapify(int i)
 
 HNode* Heap::heapExtract()
 {
+  int size = mHeapArray.size() - 1;
   HNode *pMax = mHeapArray.at(1);
 
-  mHeapArray.at(1) = mHeapArray.at(mHeapArray.size());
+  mHeapArray.at(1) = mHeapArray[size];
   mHeapArray.pop_back();
 
   heapify(1);

@@ -32,6 +32,9 @@ int main ()
   
   std::cout << cHeap;
 
+  cHeap.heapExtract();
+
+  std::cout << std::endl << cHeap;
 
   cHeap.insert(new IntNode(20));
 
