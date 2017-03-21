@@ -23,6 +23,8 @@ int main ()
 
   pFile.open("integerNode.txt");
 
+  cHeap.setSortDirection(Heap::MIN);
+
   while (pFile >> receiver)
   {
     cHeap.insert(new IntNode(receiver));
@@ -30,9 +32,8 @@ int main ()
   
   std::cout << cHeap;
 
-  cHeap.setSortDirection(Heap::MIN);
 
-  cHeap.buildHeap();
+  cHeap.insert(new IntNode(20));
 
   std::cout << std::endl << cHeap;
 

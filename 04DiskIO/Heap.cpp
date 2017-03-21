@@ -33,6 +33,7 @@ void Heap::deallocateItems()
 void Heap::insert(HNode  *pcNode)
 {
   mHeapArray.push_back(pcNode);
+  heapIncreaseKey(mHeapArray.size() - 1, pcNode);
 }
 
 int Heap::size()
@@ -107,9 +108,8 @@ void Heap::heapIncreaseKey(int size, HNode *pNode)
   }
   else
   {
-    delete mHeapArray.at(size);
     mHeapArray.at(size) = pNode;
-    while (size > 1 && *mHeapArray.at(parentNode(size)) < *mHeapArray.at(size))
+    while (size > 1 && needSwap(mHeapArray[parentNode(size)], mHeapArray[size]))
     {
       std::iter_swap(&mHeapArray.at(parentNode(size)), &mHeapArray.at(size));
       size = parentNode(size);
