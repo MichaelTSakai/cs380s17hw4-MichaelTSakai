@@ -25,6 +25,7 @@ int main ()
   HNode *pcExtracter;
   std::ifstream pFile;
   int receiver;
+  const int ADD_NODE = 20;
 
   pFile.open("integerNode.txt");
 
@@ -44,9 +45,10 @@ int main ()
 
   std::cout << std::endl << "Heap Extreme: " << *pcReciever;
 
-  cHeap.insert(new IntNode(20));
+  cHeap.insert(new IntNode(ADD_NODE));
 
-  std::cout << std::endl << "Insert 20: " << cHeap << std::endl;
+  std::cout << std::endl << "Insert " << ADD_NODE << ": "
+    << cHeap << std::endl;
 
   pcExtracter = cHeap.heapExtract();
 
@@ -67,9 +69,10 @@ int main ()
 
   std::cout << std::endl << "Heap Extreme: " << *pcReciever;
 
-  cHeapMIN.insert(new IntNode(20));
+  cHeapMIN.insert(new IntNode(ADD_NODE));
 
-  std::cout << std::endl << "Insert 20: " << cHeapMIN << std::endl;
+  std::cout << std::endl << "Insert " << ADD_NODE << ": "  
+            << cHeapMIN << std::endl;
 
   pcExtracter = cHeapMIN.heapExtract();
 

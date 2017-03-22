@@ -237,10 +237,11 @@ const HNode  * Heap::heapExtreme() const
 //********************************************************
 // Function: heapIncreaseKey
 //
-// Description: 
+// Description: increases the key at the given index location
 //
-// Parameters:  size  - the size of the array
-//              pNode - the replacement node
+// Parameters:  size  - current index of pNode
+//              pNode - the replacement node that contains
+//                      the increased value
 //
 // Returned:    none
 //		
