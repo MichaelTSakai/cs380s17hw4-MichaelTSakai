@@ -50,8 +50,8 @@ public:
 	// function
   HNode* heapExtract ();
 
-	/*// Function to return the root of the heap but NOT remove it from the heap
-	const HNode  * heapExtreme () const; */
+	// Function to return the root of the heap but NOT remove it from the heap
+	const HNode  * heapExtreme () const; 
 
 	// get the size of the heap
 	int size ();

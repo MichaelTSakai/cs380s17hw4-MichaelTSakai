@@ -1,3 +1,12 @@
+//***************************************************************************
+// File name:	IntNode.h
+// Author:		Michael Sakai
+// Date:			03/21/2017
+// Class:			CS380
+// Assignment:Disk Scheduling
+// Purpose:		This is a heap node that uses integer for it's key.
+//**************************************************************************
+
 #pragma once
 
 #include "HNode.h"
