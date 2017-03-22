@@ -1,0 +1,8 @@
+I spent most of my time trying to figure out the functions in
+HNode.h (like the update and get function). I still didn't figure
+out how it's supposed to work. 
+
+The second most time consuming work involved understanding how to 
+implement Heap using a vector. Lots of out of boundary errors. 
+
+Hours it took: probably around 8 - 10 hours

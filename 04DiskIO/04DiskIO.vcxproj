@@ -37,12 +37,14 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="integerNode.txt" />
+    <Text Include="summary.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C6511413-2C08-4747-86B9-83A3D8789FBE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My04DiskIO</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>04DiskIO_saka3597</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

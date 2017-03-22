@@ -57,5 +57,6 @@
     <Text Include="integerNode.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="summary.txt" />
   </ItemGroup>
 </Project>
