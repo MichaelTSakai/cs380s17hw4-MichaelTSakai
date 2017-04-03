@@ -13,7 +13,16 @@
 #include "Heap.h"
 #include <fstream>
 
-
+//********************************************************
+// Function: main
+//
+// Description: main function for the IntHeapDriver
+//
+// Parameters:  none
+//
+// Returned:    0 if successful
+//		
+//********************************************************
 int main ()
 {
 #ifdef MEM_DEBUG

@@ -21,14 +21,15 @@ public:
   bool operator> (ComparableItem  const &right) const;
   bool operator== (ComparableItem const  &right)const;
 
-  void changeKey(void*);
+  virtual void changeKey(void*);
 
-  void outputNode(std::ostream& os) const;
+  virtual void outputNode(std::ostream& os) const;
+
   ~IntNode();
 
-  bool getKey(void*, int) const;
+  virtual bool getKey(void*, int) const;
 
-  bool updateKey(void*, int);
+  virtual bool updateKey(void*, int);
 private: 
   int mKey;
 };

@@ -56,13 +56,13 @@ public:
 	// get the size of the heap
 	int size ();
 
-/*	// visitor pattern (this is optional)
+	// visitor pattern (this is optional)
 	// http://www.oodesign.com/visitor-pattern.html
 	// This will visit each item in the heap,
 	// and call HNode::updateKey(void*, int) using pData and size
 	// on each of those items.
 	// Lastly, buildHeap() is called.
-	bool updateEachKey (void *pData, int size);*/
+	bool updateEachKey (void *pData, int size);
 
 	enum Direction { MAX, MIN };
 

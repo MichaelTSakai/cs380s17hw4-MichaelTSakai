@@ -20,12 +20,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ComparableItem.h" />
+    <ClInclude Include="DiskIONode.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="HNode.h" />
     <ClInclude Include="IntNode.h" />
     <ClInclude Include="mem_debug.h" />
+    <ClInclude Include="Visitor.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DiskHeapDriver.cpp" />
+    <ClCompile Include="DiskIONode.cpp" />
     <ClCompile Include="Heap.cpp" />
     <ClCompile Include="HNode.cpp" />
     <ClCompile Include="IntHeapDriver.cpp" />

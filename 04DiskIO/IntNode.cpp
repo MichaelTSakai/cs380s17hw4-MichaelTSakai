@@ -115,9 +115,9 @@ bool IntNode::operator== (ComparableItem const  &cRight) const
 // Returned:    none
 //		
 //********************************************************
-void IntNode::changeKey(void*)
+void IntNode::changeKey(void* pcData)
 {
-
+  static_cast<IntNode*>(pcData)->getKey(dynamic_cast<void*>(this), sizeof(int));
 }
 
 //********************************************************
@@ -152,6 +152,7 @@ void IntNode::outputNode(std::ostream& os) const
 //********************************************************
 bool IntNode::getKey(void *, int) const
 {
+  
   return false;
 }
 

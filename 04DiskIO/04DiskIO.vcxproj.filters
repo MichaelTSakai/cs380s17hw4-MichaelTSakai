@@ -30,6 +30,12 @@
     <ClInclude Include="mem_debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DiskIONode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Heap.cpp">
@@ -42,6 +48,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IntNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiskHeapDriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiskIONode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -264,6 +264,11 @@ void Heap::heapIncreaseKey(int size, HNode *pNode)
   }
 }
 
+bool Heap::updateEachKey(void *pData, int size)
+{
+
+}
+
 //********************************************************
 // Function: needSwap
 //
