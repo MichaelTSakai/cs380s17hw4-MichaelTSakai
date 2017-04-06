@@ -12,6 +12,7 @@
 #pragma once
 
 #include "HNode.h"
+#include "UpdateVisitor.h"
 #include <vector>
 #include <iostream>
 #include <iomanip>
@@ -89,4 +90,6 @@ private:
 	std::vector<HNode*> mHeapArray;
 
 	Direction mSortDir;
+
+  UpdateVisitor *mcVisitor;
 };

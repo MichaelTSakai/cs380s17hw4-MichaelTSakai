@@ -266,7 +266,20 @@ void Heap::heapIncreaseKey(int size, HNode *pNode)
 
 bool Heap::updateEachKey(void *pData, int size)
 {
+  mcVisitor = new UpdateVisitor(pData, size);
+  std::vector<HNode*>::iterator iterator;
 
+  iterator = mHeapArray.begin();
+  
+  while (iterator != mHeapArray.end())
+  {
+    (*iterator)->acceptVisitor(mcVisitor);
+    iterator++;
+  }
+
+  delete mcVisitor;
+
+  return true;
 }
 
 //********************************************************

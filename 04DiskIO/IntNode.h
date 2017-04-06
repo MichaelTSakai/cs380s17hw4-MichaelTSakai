@@ -28,6 +28,8 @@ public:
   ~IntNode();
 
   virtual bool getKey(void*, int) const;
+  
+  virtual void acceptVisitor(IVisitor *pcVisitor);
 
   virtual bool updateKey(void*, int);
 private: 

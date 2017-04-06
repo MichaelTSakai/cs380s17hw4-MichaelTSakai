@@ -30,7 +30,7 @@ public:
 
   int getBirth() const { return mBirth; };
 
-
+  void acceptVisitor(IVisitor *pcVisitor);
 
   // we want to turn the Max heap into a min heap, so
   // flip the result of the < and > operators.

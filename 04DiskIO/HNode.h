@@ -14,6 +14,8 @@
 #include <iostream>
 #include "ComparableItem.h"
 
+class IVisitor;
+
 class HNode : public ComparableItem
 {
 public:
@@ -46,6 +48,8 @@ public:
 	// errors include incorrect or incorrectly sized data
 	// being sent to the function
 	virtual bool updateKey (void*, int) = 0;
+
+  virtual void acceptVisitor(IVisitor *pcVisitor) = 0;
 
 	friend std::ostream& operator<<(std::ostream &os, const HNode &theNode);
 };

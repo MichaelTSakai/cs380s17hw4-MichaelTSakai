@@ -25,15 +25,16 @@
     <ClInclude Include="HNode.h" />
     <ClInclude Include="IntNode.h" />
     <ClInclude Include="mem_debug.h" />
-    <ClInclude Include="Visitor.h" />
+    <ClInclude Include="IVisitor.h" />
+    <ClInclude Include="UpdateVisitor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DiskHeapDriver.cpp" />
     <ClCompile Include="DiskIONode.cpp" />
     <ClCompile Include="Heap.cpp" />
     <ClCompile Include="HNode.cpp" />
-    <ClCompile Include="IntHeapDriver.cpp" />
     <ClCompile Include="IntNode.cpp" />
+    <ClCompile Include="UpdateVisitor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="diskio.dat" />

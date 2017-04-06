@@ -150,10 +150,22 @@ void IntNode::outputNode(std::ostream& os) const
 // Returned:    false if error
 //		
 //********************************************************
-bool IntNode::getKey(void *, int) const
+bool IntNode::getKey(void * pBuffer, int size) const
 {
-  
-  return false;
+  bool bSuccess;
+
+  if (size == sizeof(int))
+  {
+    *static_cast<int*>(pBuffer) = mKey;
+    bSuccess = true;
+  }
+  else
+  {
+    std::cerr << "Incorrect Data Size\n";
+    bSuccess = false;
+  }
+
+  return bSuccess;
 }
 
 //********************************************************
@@ -172,7 +184,25 @@ bool IntNode::getKey(void *, int) const
 // Returned:    false if error
 //		
 //********************************************************
-bool IntNode::updateKey(void *, int) 
+bool IntNode::updateKey(void *pKey, int size) 
 {
-  return false;
+  bool  bSuccess; 
+
+  if (size == sizeof(int))
+  {
+    changeKey(pKey);
+    bSuccess = true;
+  }
+  else
+  {
+    std::cerr << "Incorrect Data size";
+    bSuccess = false;
+  }
+
+  return bSuccess;
+}
+
+void IntNode::acceptVisitor(IVisitor *pcVisitor)
+{
+
 }
