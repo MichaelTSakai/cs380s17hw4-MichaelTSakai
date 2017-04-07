@@ -62,6 +62,8 @@ void Heap::deallocateItems()
 
   iterator = mHeapArray.begin();
 
+	iterator++;
+
   while (iterator != mHeapArray.end())
   {
     delete *iterator;
@@ -264,12 +266,25 @@ void Heap::heapIncreaseKey(int size, HNode *pNode)
   }
 }
 
+//********************************************************
+// Function: updateEachKey
+//
+// Description: Uses pData to update each key in array
+//
+// Parameters:  pData - data passed into the update functions
+//							size	- size of data
+//
+// Returned:    false if error
+//		
+//********************************************************
 bool Heap::updateEachKey(void *pData, int size)
 {
   mcVisitor = new UpdateVisitor(pData, size);
   std::vector<HNode*>::iterator iterator;
 
   iterator = mHeapArray.begin();
+
+	iterator++;
   
   while (iterator != mHeapArray.end())
   {

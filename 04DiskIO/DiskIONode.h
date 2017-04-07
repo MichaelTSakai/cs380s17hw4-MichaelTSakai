@@ -1,7 +1,16 @@
+//***************************************************************************
+// File name:	DiskIONode.h
+// Author:		Michael Sakai
+// Date:			04/6/2017
+// Class:			CS380
+// Assignment:Disk Scheduling
+// Purpose:		This is a heap node that uses the distance from the node's track
+//						to the head's track. 
+//**************************************************************************
+
 #pragma once
 
 #include "IntNode.h"
-
 
 class DiskIONode : public IntNode
 {

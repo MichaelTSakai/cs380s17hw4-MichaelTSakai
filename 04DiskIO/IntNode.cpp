@@ -40,7 +40,7 @@ IntNode::IntNode(int key)
 }
 
 //********************************************************
-// Destructor: ~Heap
+// Destructor: ~IntNode
 //
 // Description: Destroys all data member
 //
@@ -169,7 +169,7 @@ bool IntNode::getKey(void * pBuffer, int size) const
 }
 
 //********************************************************
-// Function: getKey
+// Function: updateKey
 //
 // Description: this method allows the key to be changed based upon some
 //              other data.  
@@ -202,6 +202,17 @@ bool IntNode::updateKey(void *pKey, int size)
   return bSuccess;
 }
 
+//********************************************************
+// Function: acceptVisitor
+//
+// Description: accepts the visitor class and passes itself
+//							into the parameter of visit
+//
+// Parameters:  pcVisitor - the visitor class
+//
+// Returned:    none
+//		
+//********************************************************
 void IntNode::acceptVisitor(IVisitor *pcVisitor)
 {
 
